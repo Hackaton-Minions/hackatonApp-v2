@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Запись"
-        android:id="@+id/profileFragment"/>
+        android:id="@+id/signFragment"/>
 
     <item android:title="Статистика"
         android:id="@+id/statisticFragment"/>
 
     <item android:title="Профиль"
-        android:id="@+id/signFragment"/>
+        android:id="@+id/profileFragment"/>
 
 </menu>
