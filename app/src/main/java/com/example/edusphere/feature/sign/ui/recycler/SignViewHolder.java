@@ -1,8 +1,5 @@
 package com.example.edusphere.feature.sign.ui.recycler;
 
-import android.view.View;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.edusphere.databinding.ItemSignsBinding;
