@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorBlue_Figma">#597DA3</color>
+    <color name="stroke_color">#726a6a</color>
+    <color name="color_hint">#7E7E9A</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="gray">#e3e3e3</color>
+    <color name="forTitle">#656666</color>
+    <color name="red">#ff0000</color>
+    <color name="button_normal">#327496</color>
+    <color name="button_gray">#BDBDBD</color>
+    <color name="hint">#7E7E9A</color>
+    <color name="menu_header">#EFEFEF</color>
+    <color name="green">#00ff00 </color>
+    <color name="main_color">#283593</color>
+</resources>
