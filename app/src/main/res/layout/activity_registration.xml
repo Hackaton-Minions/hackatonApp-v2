@@ -20,102 +20,101 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/edit_text_field"
-            android:padding="5dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/spinner"
+            android:padding="10dp" />
 
         <EditText
-            android:textSize="20sp"
-
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Логин"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <EditText
-            android:textSize="20sp"
-
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Логин родителя"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <EditText
-            android:textSize="20sp"
-
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Пароль"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <EditText
-            android:textSize="20sp"
-
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Код школы"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <EditText
-            android:textSize="20sp"
-
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Класс"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <EditText
-            android:textSize="20sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
             android:hint="Предмет"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Зарегестрироваться"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_style"
-            android:paddingHorizontal="15dp"/>
+            android:text="Зарегестрироваться"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <TextView
         android:id="@+id/alreadyRegisteredButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Уже зарегестрирован"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/open_sans"
         android:paddingHorizontal="10dp"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:background="@drawable/button_style"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

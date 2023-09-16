@@ -57,9 +57,11 @@ public class SignProccesFragment extends Fragment {
         for(int i = 0; i< 60;i+=10){
             events.add("16:" + String.valueOf(i));
         }
-        for(int i =0;i<lst.size();i++){
-            String time = lst.get(i).getTime();
-            events.remove(time);
+        if(!lst.isEmpty()){
+            for(int i =0;i<lst.size();i++){
+                String time = lst.get(i).getTime();
+                events.remove(time);
+            }
         }
         scheduleAdapter = new ArrayAdapter<String>
                 (getContext(), android.R.layout.simple_list_item_single_choice, events);

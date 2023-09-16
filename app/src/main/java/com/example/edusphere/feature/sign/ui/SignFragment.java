@@ -13,10 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.edusphere.R;
 import com.example.edusphere.databinding.FragmentSignBinding;
 import com.example.edusphere.domain.model.sign.Sign;
 import com.example.edusphere.feature.sign.ui.recycler.SignAdapter;
 import com.example.edusphere.feature.sign.ui.recycler.SignClickListener;
+import com.example.edusphere.feature.sign_process.ui.SignProccesFragment;
 import com.example.edusphere.feature.teachers.ui.TeachersFragment;
 
 import java.util.ArrayList;
@@ -40,9 +42,15 @@ public class SignFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        TeachersFragment fragment_teachers = new TeachersFragment();
-//        FragmentManager fragmentManager = getActivity().getFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        binding.registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.nav_host_fragment_activity_main, new SignProccesFragment(), "NewFragmentTag");
+                ft.commit();
+            }
+        });
 
 
     }
