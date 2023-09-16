@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpinnerItemStyle">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <!-- Другие атрибуты стиля по вашему усмотрению -->
+    </style>
+</resources>

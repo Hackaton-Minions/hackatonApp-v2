@@ -4,131 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.registration.ui.Registration">
+    tools:context=".feature.registration.ui.Registration"
+    android:padding="70dp">
 
-    <Spinner
-        android:id="@+id/typesList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/spinner"
-        android:fontFamily="@font/open_sans"
-        android:padding="10dp"
-        android:layout_marginTop="80dp"
 
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
-            android:fontFamily="@font/open_sans"
-            android:hint="Логин"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/parent_login"
+        <Spinner
+            android:id="@+id/typesList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/spinner"
             android:fontFamily="@font/open_sans"
-            android:hint="Логин родителя"
-            android:padding="5dp"
-            android:textSize="20sp" />
 
 
-        <EditText
-            android:id="@+id/school_code"
-            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/login"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/typesList"
+                android:hint="Логин"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/parent_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/login"
+                android:hint="Логин родителя"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/school_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/parent_login"
+
+                android:hint="Код школы"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/group_for_student"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/school_code"
+
+                android:hint="Класс"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/group_for_student"
+                android:hint="Предмет"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_field"
+                android:fontFamily="@font/open_sans"
+                app:layout_constraintTop_toBottomOf="@id/subject"
+
+                android:hint="Пароль"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_style"
+                android:fontFamily="@font/open_sans"
+                android:padding="10dp"
+                android:text="Зарегестрироваться"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/alreadyRegisteredButton"
+                android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/alreadyRegisteredButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
             android:fontFamily="@font/open_sans"
-            android:hint="Код школы"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/group_for_student"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
-            android:fontFamily="@font/open_sans"
-            android:hint="Класс"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/subject"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
-            android:fontFamily="@font/open_sans"
-            android:hint="Предмет"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
-            android:fontFamily="@font/open_sans"
-            android:hint="Пароль"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/registerButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button_style"
-            android:fontFamily="@font/open_sans"
-            android:text="Зарегестрироваться"
+            android:paddingHorizontal="10dp"
+            android:text="Войти"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/alreadyRegisteredButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="@font/open_sans"
-        android:paddingHorizontal="10dp"
-        android:text="Войти"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
