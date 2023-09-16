@@ -20,13 +20,18 @@
             android:name=".feature.main_teacher.ui.MainTeacherActivity"
             android:exported="false" />
         <activity
-            android:name=".feature.main.ui.MainActivity"
+            android:name=".feature.registration.ui.Registration"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.main.ui.MainActivity"
+            android:exported="false">
+
         </activity>
     </application>
 
