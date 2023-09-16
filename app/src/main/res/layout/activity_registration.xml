@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".feature.registration.ui.Registration">
 
+    <Spinner
+        android:id="@+id/typesList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner"
+        android:fontFamily="@font/open_sans"
+        android:padding="10dp"
+        android:layout_marginTop="80dp"
+
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
@@ -17,13 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/spinner"
-            android:padding="10dp" />
-
         <EditText
             android:layout_width="match_parent"
 
@@ -31,61 +36,69 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
             android:hint="Логин"
             android:padding="5dp"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/parent_login"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
             android:hint="Логин родителя"
             android:padding="5dp"
             android:textSize="20sp" />
 
-        <EditText
-            android:layout_width="match_parent"
 
+        <EditText
+            android:id="@+id/school_code"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
-            android:hint="Пароль"
-            android:padding="5dp"
-            android:textSize="20sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
             android:hint="Код школы"
             android:padding="5dp"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/group_for_student"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
             android:hint="Класс"
             android:padding="5dp"
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
             android:hint="Предмет"
+            android:padding="5dp"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_field"
+            android:fontFamily="@font/open_sans"
+            android:hint="Пароль"
             android:padding="5dp"
             android:textSize="20sp" />
 
@@ -95,6 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_style"
+            android:fontFamily="@font/open_sans"
             android:text="Зарегестрироваться"
             android:textAllCaps="false"
             android:textColor="@color/white"
