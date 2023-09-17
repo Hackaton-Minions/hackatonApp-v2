@@ -130,11 +130,11 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/alreadyRegisteredButton"
+                app:layout_constraintBottom_toTopOf="@id/enter"
                 android:layout_marginBottom="20dp"/>
 
         <TextView
-            android:id="@+id/alreadyRegisteredButton"
+            android:id="@+id/enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans"

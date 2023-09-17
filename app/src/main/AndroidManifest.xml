@@ -32,6 +32,11 @@
             android:exported="false">
 
         </activity>
+        <activity
+            android:name=".feature.login.ui.Login"
+            android:exported="false">
+
+        </activity>
     </application>
 
 </manifest>
