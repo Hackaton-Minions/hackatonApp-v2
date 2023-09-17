@@ -50,6 +50,7 @@ public class SignProccesFragment extends Fragment {
 
         viewModel.events.observe(getViewLifecycleOwner(), this::setAdapter);
         viewModel.load_events(1);
+
     }
 
     private void setAdapter(@NonNull List<MyEvent> lst){

@@ -13,8 +13,8 @@ import java.util.List;
 import retrofit2.Call;
 
 public class RegistrationRepository {
-    public static Call<UserResponse> registerStudent(Student student){
-        return RegistrationApiService.getInstance().registerStudent(student);
+    public static Call<UserResponse> registerStudent(Student student, String parent_login, String group){
+        return RegistrationApiService.getInstance().registerStudent(student, parent_login, group);
     }
     public static Call<UserResponse> registerParent(Parent parent){
         return RegistrationApiService.getInstance().registerParent(parent);

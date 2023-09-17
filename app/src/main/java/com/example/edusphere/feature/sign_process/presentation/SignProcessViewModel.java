@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModel;
 
 import com.example.edusphere.data.repository.EventRepository;
 import com.example.edusphere.domain.model.events.MyEvent;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -30,7 +32,12 @@ public class SignProcessViewModel extends ViewModel {
             @Override
             public void onResponse(Call<List<MyEvent>> call, Response<List<MyEvent>> response) {
                 _status.setValue(SignProcessStatus.LOADED);
-                _events.setValue(response.body());
+//                _events.setValue(response.body());
+                if(response.body() == null){
+                    _events.setValue(new ArrayList<MyEvent>());
+                }else{
+                    _events.setValue(response.body());
+                }
             }
 
             @Override

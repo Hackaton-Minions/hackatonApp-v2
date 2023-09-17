@@ -1,9 +1,9 @@
 package com.example.edusphere.domain.model.registration;
 
 public class UserResponse {
+    private long id;
     private String name;
     private String login;
-    private String password;
 
     public String getName() {
         return name;
@@ -13,7 +13,7 @@ public class UserResponse {
         return login;
     }
 
-    public String getPassword() {
-        return password;
+    public long getId() {
+        return id;
     }
 }

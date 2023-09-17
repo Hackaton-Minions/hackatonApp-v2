@@ -1,5 +1,7 @@
 package com.example.edusphere.feature.registration.presentation;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -22,9 +24,9 @@ public class RegistrationViewModel extends ViewModel {
     public LiveData<UserResponse> user = _user;
 
 
-    public void register_student(Student student){
+    public void register_student(Student student, String parent_login, String group){
         _status.setValue(RegistrationStatus.LOADING);
-        RegistrationRepository.registerStudent(student).enqueue(new Callback<UserResponse>() {
+        RegistrationRepository.registerStudent(student, parent_login, group).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 _status.setValue(RegistrationStatus.LOADED);
@@ -45,6 +47,7 @@ public class RegistrationViewModel extends ViewModel {
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 _status.setValue(RegistrationStatus.LOADED);
                 _user.setValue(response.body());
+                Log.d("TAGG", call.toString());
             }
 
             @Override

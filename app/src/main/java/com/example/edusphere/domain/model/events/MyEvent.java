@@ -6,6 +6,8 @@ public class MyEvent {
     private String time;
     private String user_type;
     private String id_teacher;
+    private String subject;
+    private String name_teacher;
 
     public String getTime() {
         return time;
