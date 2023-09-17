@@ -19,7 +19,7 @@ public class RegistrationRepository {
     public static Call<UserResponse> registerParent(Parent parent){
         return RegistrationApiService.getInstance().registerParent(parent);
     }
-    public static Call<UserResponse> registerTeacher(Teacher teacher) {
-        return RegistrationApiService.getInstance().registerTeacher(teacher);
+    public static Call<UserResponse> registerTeacher(Teacher teacher, String group) {
+        return RegistrationApiService.getInstance().registerTeacher(teacher, group);
     }
 }

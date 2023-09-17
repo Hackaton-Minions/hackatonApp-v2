@@ -64,13 +64,17 @@ public class RegistrationViewModel extends ViewModel {
             }
         });
     }
-    public void register_teacher(Teacher teacher){
+    public void register_teacher(Teacher teacher, String group){
         _status.setValue(RegistrationStatus.LOADING);
-        RegistrationRepository.registerTeacher(teacher).enqueue(new Callback<UserResponse>() {
+        RegistrationRepository.registerTeacher(teacher, group).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 _status.setValue(RegistrationStatus.LOADED);
-                _user.setValue(response.body());
+                if(response.isSuccessful()){
+                    _user.setValue(response.body());
+                }else{
+                    _user.setValue(new UserResponse(-1, "0", "0"));
+                }
             }
 
             @Override

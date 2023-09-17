@@ -4,11 +4,12 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
+    android:id="@+id/container"
     android:background="@drawable/item_style"
     android:layout_marginBottom="10dp">
 
     <TextView
-        android:id="@+id/textViewName"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
@@ -17,12 +18,13 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textViewProfession"
+        android:id="@+id/subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:textColor="@color/black"
         android:text="Русский язык"
         android:textSize="16sp" />
+
 
 </LinearLayout>

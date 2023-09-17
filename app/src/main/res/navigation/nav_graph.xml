@@ -19,5 +19,28 @@
         android:id="@+id/signFragment"
         android:name="com.example.edusphere.feature.sign.ui.SignFragment"
         android:label="fragment_sign"
-        tools:layout="@layout/fragment_sign" />
+        tools:layout="@layout/fragment_sign" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/teachersFragment"
+        android:name="com.example.edusphere.feature.teachers.ui.TeachersFragment"
+        android:label="fragment_teachers"
+        tools:layout="@layout/fragment_teachers" >
+        <argument android:name="id"
+            app:argType="long"
+            app:nullable="false"/>
+        <action
+            android:id="@+id/action_teachersFragment_to_signProccesFragment"
+            app:destination="@id/signProccesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signProccesFragment"
+        android:name="com.example.edusphere.feature.sign_process.ui.SignProccesFragment"
+        android:label="fragment_sign_procces"
+        tools:layout="@layout/fragment_sign_procces">
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
 </navigation>

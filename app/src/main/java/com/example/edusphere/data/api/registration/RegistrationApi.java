@@ -13,7 +13,7 @@ import retrofit2.http.Query;
 
 public interface RegistrationApi {
     @POST("/register/student/")
-    Call<UserResponse> registerStudent(@Body Student student, @Query("parent_login") String p_login, @Query("group") String group);
+    Call<UserResponse> registerStudent(@Body Student student, @Query("parent_login") String parent_login, @Query("group") String group);
 
     @Headers({
             "Accept: application/json",
@@ -27,5 +27,5 @@ public interface RegistrationApi {
             "Content-type: application/json"
     })
     @POST("/register/teacher/")
-    Call<UserResponse> registerTeacher(@Body Teacher teacher);
+    Call<UserResponse> registerTeacher(@Body Teacher teacher, @Query("group") String group);
 }

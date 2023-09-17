@@ -117,14 +117,12 @@ public class Registration extends AppCompatActivity {
                 );
                 break;
             case "Учитель":
-                List<String> g = new ArrayList<>();
-                g.add("11-4");
                 viewModel.user.observe(this, this::saveUser);
                 viewModel.register_teacher(new Teacher(
                         binding.name.getText().toString(),
                         binding.login.getText().toString(),
                         binding.password.getText().toString(),
-                        g));
+                        binding.subject.getText().toString()), "11-4");
                 break;
             case "Родитель":
                 viewModel.user.observe(this, this::saveUser);
