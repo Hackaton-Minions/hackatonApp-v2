@@ -2,6 +2,7 @@ package com.example.edusphere.data.api.events;
 
 
 import com.example.edusphere.domain.model.events.MyEvent;
+import com.example.edusphere.domain.model.events.Sign;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface EventApi {
             long id
     );
 
+    @GET("/get_event_by_user/")
+    Call<List<Sign>> getEventByUser(@Query("user_type") String userType, @Query("user_id") long userId);
 }

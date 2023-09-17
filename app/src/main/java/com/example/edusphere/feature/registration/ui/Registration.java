@@ -1,12 +1,14 @@
 package com.example.edusphere.feature.registration.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -16,10 +18,13 @@ import com.example.edusphere.domain.model.registration.Parent;
 import com.example.edusphere.domain.model.registration.Student;
 import com.example.edusphere.domain.model.registration.Teacher;
 import com.example.edusphere.domain.model.registration.UserResponse;
+import com.example.edusphere.feature.main.ui.MainActivity;
+import com.example.edusphere.feature.main_teacher.ui.MainTeacherActivity;
 import com.example.edusphere.feature.registration.presentation.RegistrationViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class Registration extends AppCompatActivity {
@@ -36,7 +41,7 @@ public class Registration extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(RegistrationViewModel.class);
 
         userTypes = new ArrayList<>();
-        userTypes.add("Студент");
+        userTypes.add("Ученик");
         userTypes.add("Учитель");
         userTypes.add("Родитель");
 
@@ -70,16 +75,30 @@ public class Registration extends AppCompatActivity {
     }
 
     private void saveUser(UserResponse user){
-//        sharedPreferences = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//
-//        editor.putString("id", String.valueOf(user.getId()));
 
+        if(user.getId() == -1){
+            Toast.makeText(this, "Что-то пошло не так", Toast.LENGTH_SHORT).show();
+        }else{
+            sharedPreferences = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            editor.putLong("id", user.getId());
+            editor.putString("user_type", binding.typesList.getSelectedItem().toString());
+
+            editor.apply();
+            if(Objects.equals(binding.typesList.getSelectedItem().toString(), "Ученик") || Objects.equals(binding.typesList.getSelectedItem().toString(), "Родитель")){
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            }else{
+                Intent intent = new Intent(this, MainTeacherActivity.class);
+                startActivity(intent);
+            }
+        }
     }
 
     private void regUser(String user){
         switch (user){
-            case "Студент":
+            case "Ученик":
                 viewModel.user.observe(this, this::saveUser);
                 viewModel.register_student(new Student(
                         binding.login.getText().toString(),
@@ -100,13 +119,12 @@ public class Registration extends AppCompatActivity {
                         g));
                 break;
             case "Родитель":
-                //viewModel.user.observe(this, this::saveUser);
+                viewModel.user.observe(this, this::saveUser);
                 Parent p = new Parent(
                     binding.name.getText().toString(),
                     binding.login.getText().toString(),
                     binding.password.getText().toString()
                 );
-                Log.d("TAGG", p.getLogin() + p.getPassword() + p.getName());
                 viewModel.register_parent(p);
                 break;
         }
@@ -117,7 +135,7 @@ public class Registration extends AppCompatActivity {
 
     private void renderFields(String user){
         switch (user){
-            case "Студент":
+            case "Ученик":
                 binding.parentLogin.setVisibility(View.VISIBLE);
                 binding.groupForStudent.setVisibility(View.VISIBLE);
 

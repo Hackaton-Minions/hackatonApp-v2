@@ -8,20 +8,31 @@
     android:padding="70dp">
 
 
-        <Spinner
-            android:id="@+id/typesList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:background="@drawable/spinner"
-            android:fontFamily="@font/open_sans"
+    <Spinner
+        android:id="@+id/typesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/spinner"
+        android:fontFamily="@font/open_sans"
 
 
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_field"
+        android:fontFamily="@font/open_sans"
+        android:hint="ФИО"
+        android:padding="10dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/typesList"
+        tools:layout_editor_absoluteX="70dp" />
             <EditText
                 android:layout_width="match_parent"
                 android:id="@+id/login"
@@ -30,7 +41,7 @@
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/edit_text_field"
                 android:fontFamily="@font/open_sans"
-                app:layout_constraintTop_toBottomOf="@id/typesList"
+                app:layout_constraintTop_toBottomOf="@id/name"
                 android:hint="Логин"
                 android:padding="10dp"
                 android:textSize="20sp" />
@@ -92,7 +103,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-
+                android:id="@+id/password"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"

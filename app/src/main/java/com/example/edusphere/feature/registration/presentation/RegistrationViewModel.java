@@ -30,7 +30,11 @@ public class RegistrationViewModel extends ViewModel {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 _status.setValue(RegistrationStatus.LOADED);
-                _user.setValue(response.body());
+                if(response.isSuccessful()){
+                    _user.setValue(response.body());
+                }else{
+                    _user.setValue(new UserResponse(-1, "0", "0"));
+                }
             }
 
             @Override
@@ -46,8 +50,11 @@ public class RegistrationViewModel extends ViewModel {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 _status.setValue(RegistrationStatus.LOADED);
-                _user.setValue(response.body());
-                Log.d("TAGG", call.toString());
+                if(response.isSuccessful()){
+                    _user.setValue(response.body());
+                }else{
+                    _user.setValue(new UserResponse(-1, "0", "0"));
+                }
             }
 
             @Override

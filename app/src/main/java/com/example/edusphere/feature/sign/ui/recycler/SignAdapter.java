@@ -7,26 +7,27 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 import com.example.edusphere.databinding.ItemSignsBinding;
-import com.example.edusphere.domain.model.sign.Sign;
+import com.example.edusphere.domain.model.events.Sign;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SignAdapter extends Adapter<SignViewHolder> {
 
-    private final SignClickListener listener;
+//    private final SignClickListener listener;
     private List<Sign> items = new ArrayList<>();
 
-    public SignAdapter(SignClickListener listener) {
-        this.listener = listener;
-    }
+//    public SignAdapter(SignClickListener listener) {
+//        this.listener = listener;
+//    }
 
 
     @NonNull
     @Override
     public SignViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemSignsBinding binding = ItemSignsBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new SignViewHolder(binding, listener);
+//        return new SignViewHolder(binding, listener);
+        return new SignViewHolder(binding);
     }
 
     @Override

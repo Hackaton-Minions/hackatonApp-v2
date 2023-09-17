@@ -16,4 +16,9 @@ public class UserResponse {
     public long getId() {
         return id;
     }
+    public UserResponse(long id, String name, String login){
+        this.id = id;
+        this.name = name;
+        this.login = login;
+    }
 }
