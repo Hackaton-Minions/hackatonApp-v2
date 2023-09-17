@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".feature.registration.ui.Registration"
-    android:padding="70dp">
+    android:padding="25dp">
 
 
     <Spinner
@@ -126,7 +126,7 @@
                 android:background="@drawable/button_style"
                 android:fontFamily="@font/open_sans"
                 android:padding="10dp"
-                android:text="Зарегестрироваться"
+                android:text="Зарегистрироваться"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -139,6 +139,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans"
             android:paddingHorizontal="10dp"
+            android:layout_marginBottom="80dp"
             android:text="Войти"
             android:textAllCaps="false"
             android:textColor="@color/black"

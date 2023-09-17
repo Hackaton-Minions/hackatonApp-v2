@@ -4,27 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".feature.login.ui.Login">
+    tools:context=".feature.login.ui.Login"
+    android:padding="25dp">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Окно ввода логина -->
-        <EditText
-            android:id="@+id/loginEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_field"
-            android:padding="15dp"
-            android:hint="Логин"
-            android:textSize="20sp"
-            android:inputType="text" />
+    <EditText
+        android:id="@+id/loginEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_field"
+        android:hint="Логин"
+        android:fontFamily="@font/open_sans"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
 
         <!-- Окно ввода пароля -->
         <EditText
@@ -32,9 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_field"
+            app:layout_constraintTop_toBottomOf="@id/loginEditText"
             android:padding="15dp"
             android:layout_marginTop="16dp"
             android:hint="Пароль"
+            android:fontFamily="@font/open_sans"
             android:textSize="20sp"
             android:inputType="textPassword" />
 
@@ -43,24 +42,31 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_style"
-            android:text="Войти" />
-    </LinearLayout>
+            android:fontFamily="@font/open_sans"
+            android:padding="10dp"
+            android:text="Войти"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/signupButton"
+            android:layout_marginBottom="20dp" />
 
-    <androidx.appcompat.widget.AppCompatButton
+
+    <TextView
         android:id="@+id/signupButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Зарегестрироваться"
-        android:textSize="20sp"
-        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:paddingHorizontal="10dp"
+        android:layout_marginBottom="80dp"
+        android:text="Зарегистрироваться"
         android:textAllCaps="false"
-        android:background="@drawable/button_style"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
