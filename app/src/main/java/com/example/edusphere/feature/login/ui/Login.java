@@ -5,14 +5,17 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.edusphere.R;
+import com.example.edusphere.databinding.ActivityLoginBinding;
 
 
 public class Login extends AppCompatActivity {
-
+    private ActivityLoginBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+
+
+        setContentView(binding.getRoot());
     }
 }

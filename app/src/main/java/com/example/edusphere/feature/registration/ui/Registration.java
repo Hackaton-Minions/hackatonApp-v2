@@ -18,6 +18,7 @@ import com.example.edusphere.domain.model.registration.Parent;
 import com.example.edusphere.domain.model.registration.Student;
 import com.example.edusphere.domain.model.registration.Teacher;
 import com.example.edusphere.domain.model.registration.UserResponse;
+import com.example.edusphere.feature.login.ui.Login;
 import com.example.edusphere.feature.main.ui.MainActivity;
 import com.example.edusphere.feature.main_teacher.ui.MainTeacherActivity;
 import com.example.edusphere.feature.registration.presentation.RegistrationViewModel;
@@ -50,6 +51,13 @@ public class Registration extends AppCompatActivity {
         binding.typesList.setPrompt("Выберите помещение");
         binding.typesList.setAdapter(adapter);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        binding.enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(), Login.class));
+            }
+        });
 
         binding.typesList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
